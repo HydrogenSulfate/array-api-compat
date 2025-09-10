@@ -5,12 +5,12 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Changelog" href="changelog.html" /><link rel="prev" title="Helper Functions" href="helper-functions.html" />
 
-    <link rel="shortcut icon" href="_static/favicon.png"/><!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
-        <title>Supported Array Libraries - array-api-compat 1.9.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="shortcut icon" href="_static/favicon.png"/><!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
+        <title>Supported Array Libraries - array-api-compat 1.13.0.dev0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=acfd86a5" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=dc4c535e" />
     
     
@@ -18,20 +18,20 @@
 
 <style>
   body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
   
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+      --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+        --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
   
       }
     }
@@ -168,7 +168,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">array-api-compat 1.9.1 documentation</div></a>
+      <a href="index.html"><div class="brand">array-api-compat 1.13.0.dev0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -191,8 +191,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
-  
-  <span class="sidebar-brand-text">array-api-compat 1.9.1 documentation</span>
+  <span class="sidebar-brand-text">array-api-compat 1.13.0.dev0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -283,21 +282,15 @@ with the environment variable <code class="docutils literal notranslate"><span c
 <code class="docutils literal notranslate"><span class="pre">np._set_promotion_state('weak')</span></code> (requires NumPy 1.24 or newer, see <a class="reference external" href="https://numpy.org/neps/nep-0050-scalar-promotion.html">NEP
 50</a> and
 <a class="reference external" href="https://github.com/numpy/numpy/issues/22341">https://github.com/numpy/numpy/issues/22341</a>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">asarray()</span></code> does not support <code class="docutils literal notranslate"><span class="pre">copy=False</span></code>.</p></li>
 <li><p>Functions which are not wrapped may not have the same type annotations
 as the spec.</p></li>
 <li><p>Functions which are not wrapped may not use positional-only arguments.</p></li>
 </ul>
-<p>The minimum supported NumPy version is 1.21. However, this older version of
+<p>The minimum supported NumPy version is 1.22. However, this older version of
 NumPy has a few issues:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">unique_*</span></code> will not compare nans as unequal.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">finfo()</span></code> has no <code class="docutils literal notranslate"><span class="pre">smallest_normal</span></code>.</p></li>
 <li><p>No <code class="docutils literal notranslate"><span class="pre">from_dlpack</span></code> or <code class="docutils literal notranslate"><span class="pre">__dlpack__</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">argmax()</span></code> and <code class="docutils literal notranslate"><span class="pre">argmin()</span></code> do not have <code class="docutils literal notranslate"><span class="pre">keepdims</span></code>.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">qr()</span></code> doesn’t support matrix stacks.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">asarray()</span></code> doesn’t support <code class="docutils literal notranslate"><span class="pre">copy=True</span></code> (as noted above, <code class="docutils literal notranslate"><span class="pre">copy=False</span></code> is not
-supported even in the latest NumPy).</p></li>
 <li><p>Type promotion behavior will be value based for 0-D arrays (and there is no
 <code class="docutils literal notranslate"><span class="pre">NPY_PROMOTION_STATE=weak</span></code> to disable this).</p></li>
 </ul>
@@ -311,13 +304,13 @@ version.</p>
 <code class="docutils literal notranslate"><span class="pre">__array_namespace__</span></code> and <code class="docutils literal notranslate"><span class="pre">to_device</span></code> methods, so the corresponding helper
 functions <a class="reference internal" href="helper-functions.html#array_api_compat.array_namespace" title="array_api_compat.array_namespace"><code class="xref py py-func docutils literal notranslate"><span class="pre">array_namespace()</span></code></a> and <a class="reference internal" href="helper-functions.html#array_api_compat.to_device" title="array_api_compat.to_device"><code class="xref py py-func docutils literal notranslate"><span class="pre">to_device()</span></code></a> in this
 library should be used instead.</p></li>
-<li><p>The <a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.Tensor.size.html#torch.Tensor.size" title="(in PyTorch v2.6)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">x.size()</span></code></a> attribute on
+<li><p>The <a class="reference external" href="https://docs.pytorch.org/docs/stable/generated/torch.Tensor.size.html#torch.Tensor.size" title="(in PyTorch v2.8)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">x.size()</span></code></a> attribute on
 <code class="docutils literal notranslate"><span class="pre">torch.Tensor</span></code> is a method that behaves differently from the
 <a class="reference external" href="https://data-apis.org/array-api/draft/API_specification/generated/array_api.array.size.html"><code class="docutils literal notranslate"><span class="pre">x.size</span></code></a>
 attribute in the spec. Use the <a class="reference internal" href="helper-functions.html#array_api_compat.size" title="array_api_compat.size"><code class="xref py py-func docutils literal notranslate"><span class="pre">size()</span></code></a> helper function as a
 portable workaround.</p></li>
-<li><p>PyTorch does not have unsigned integer types other than <code class="docutils literal notranslate"><span class="pre">uint8</span></code>, and no
-attempt is made to implement them here.</p></li>
+<li><p>PyTorch has incomplete support for unsigned integer types other
+than <code class="docutils literal notranslate"><span class="pre">uint8</span></code>, and no attempt is made to implement them here.</p></li>
 <li><p>PyTorch has type promotion semantics that differ from the array API
 specification for 0-D tensor objects. The array functions in this wrapper
 library do work around this, but the operators on the Tensor object do not,
@@ -337,7 +330,6 @@ do not support floating-point <code class="docutils literal notranslate"><span c
 <li><p>As with NumPy, type annotations and positional-only arguments may not
 exactly match the spec for functions that are not wrapped at all.</p></li>
 </ul>
-<p>The minimum supported PyTorch version is 1.13.</p>
 </section>
 <section id="jax">
 <span id="jax-support"></span><h2><a class="reference external" href="https://jax.readthedocs.io/en/latest/">JAX</a><a class="headerlink" href="#jax" title="Link to this heading">¶</a></h2>
@@ -366,30 +358,18 @@ that you find under the <code class="docutils literal notranslate"><span class="
 <li><p><code class="docutils literal notranslate"><span class="pre">matrix_rank</span></code>
 Other methods may only be partially implemented or return incorrect results at times.</p></li>
 </ul>
-<p>The minimum supported Dask version is 2023.12.0.</p>
 </section>
 <section id="sparse">
 <span id="sparse-support"></span><h2><a class="reference external" href="https://sparse.pydata.org/en/stable/">Sparse</a><a class="headerlink" href="#sparse" title="Link to this heading">¶</a></h2>
 <p>Similar to JAX, <code class="docutils literal notranslate"><span class="pre">sparse</span></code> Array API support is contained directly in <code class="docutils literal notranslate"><span class="pre">sparse</span></code>.</p>
 </section>
-<section id="paddle">
-<h2><a class="reference external" href="https://www.paddlepaddle.org.cn/">Paddle</a><a class="headerlink" href="#paddle" title="Link to this heading">¶</a></h2>
-<ul class="simple">
-<li><p>Like NumPy/CuPy, we do not wrap the <code class="docutils literal notranslate"><span class="pre">paddle.Tensor</span></code> object. It is missing the
-<code class="docutils literal notranslate"><span class="pre">__array_namespace__</span></code> and <code class="docutils literal notranslate"><span class="pre">to_device</span></code> methods, so the corresponding helper
-functions <a class="reference internal" href="helper-functions.html#array_api_compat.array_namespace" title="array_api_compat.array_namespace"><code class="xref py py-func docutils literal notranslate"><span class="pre">array_namespace()</span></code></a> and <a class="reference internal" href="helper-functions.html#array_api_compat.to_device" title="array_api_compat.to_device"><code class="xref py py-func docutils literal notranslate"><span class="pre">to_device()</span></code></a> in this
-library should be used instead.</p></li>
-<li><p>Paddle does not have unsigned integer types other than <code class="docutils literal notranslate"><span class="pre">uint8</span></code>, and no
-attempt is made to implement them here.</p></li>
-<li><p><a class="reference external" href="https://data-apis.org/array-api/latest/API_specification/generated/array_api.std.html#array_api.std"><code class="docutils literal notranslate"><span class="pre">std()</span></code></a>
-and
-<a class="reference external" href="https://data-apis.org/array-api/latest/API_specification/generated/array_api.var.html#array_api.var"><code class="docutils literal notranslate"><span class="pre">var()</span></code></a>
-do not support floating-point <code class="docutils literal notranslate"><span class="pre">correction</span></code> except for <code class="docutils literal notranslate"><span class="pre">0.0</span></code> and <code class="docutils literal notranslate"><span class="pre">1.0</span></code>.</p></li>
-<li><p>The <code class="docutils literal notranslate"><span class="pre">stream</span></code> argument of the <a class="reference internal" href="helper-functions.html#array_api_compat.to_device" title="array_api_compat.to_device"><code class="xref py py-func docutils literal notranslate"><span class="pre">to_device()</span></code></a> helper is not supported.</p></li>
-<li><p>As with NumPy, type annotations and positional-only arguments may not
-exactly match the spec for functions that are not wrapped at all.</p></li>
-</ul>
-<p>The minimum supported PyTorch version is 3.0.0.</p>
+<section id="ndonnx">
+<span id="ndonnx-support"></span><h2><a class="reference external" href="https://github.com/quantco/ndonnx">ndonnx</a><a class="headerlink" href="#ndonnx" title="Link to this heading">¶</a></h2>
+<p>Similar to JAX, <code class="docutils literal notranslate"><span class="pre">ndonnx</span></code> Array API support is contained directly in <code class="docutils literal notranslate"><span class="pre">ndonnx</span></code>.</p>
+</section>
+<section id="array-api-strict">
+<span id="array-api-strict-support"></span><h2><a class="reference external" href="https://data-apis.org/array-api-strict/">array-api-strict</a><a class="headerlink" href="#array-api-strict" title="Link to this heading">¶</a></h2>
+<p>array-api-strict exists only to test support for the Array API, so it does not need any wrappers.</p>
 </section>
 </section>
 
@@ -461,7 +441,8 @@ exactly match the spec for functions that are not wrapped at all.</p></li>
 <li><a class="reference internal" href="#jax">JAX</a></li>
 <li><a class="reference internal" href="#dask">Dask</a></li>
 <li><a class="reference internal" href="#sparse">Sparse</a></li>
-<li><a class="reference internal" href="#paddle">Paddle</a></li>
+<li><a class="reference internal" href="#ndonnx">ndonnx</a></li>
+<li><a class="reference internal" href="#array-api-strict">array-api-strict</a></li>
 </ul>
 </li>
 </ul>
@@ -473,10 +454,10 @@ exactly match the spec for functions that are not wrapped at all.</p></li>
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=60b3a732"></script>
+</div><script src="_static/documentation_options.js?v=1e6c7a3c"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     </body>

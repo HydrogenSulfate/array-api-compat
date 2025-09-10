@@ -5,12 +5,12 @@
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Supported Array Libraries" href="supported-array-libraries.html" /><link rel="prev" title="Array API compatibility library" href="index.html" />
 
-    <link rel="shortcut icon" href="_static/favicon.png"/><!-- Generated with Sphinx 8.2.3 and Furo 2024.08.06 -->
-        <title>Helper Functions - array-api-compat 1.9.1 documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=354aac6f" />
+    <link rel="shortcut icon" href="_static/favicon.png"/><!-- Generated with Sphinx 8.2.3 and Furo 2025.07.19 -->
+        <title>Helper Functions - array-api-compat 1.13.0.dev0 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=acfd86a5" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=25af2a20" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=302659d7" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=8dab3a3b" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css?v=dc4c535e" />
     
     
@@ -18,20 +18,20 @@
 
 <style>
   body {
-    --color-code-background: #f8f8f8;
-  --color-code-foreground: black;
+    --color-code-background: #f2f2f2;
+  --color-code-foreground: #1e1e1e;
   
   }
   @media not print {
     body[data-theme="dark"] {
-      --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+      --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
   
     }
     @media (prefers-color-scheme: dark) {
       body:not([data-theme="light"]) {
-        --color-code-background: #202020;
-  --color-code-foreground: #d0d0d0;
+        --color-code-background: #2b2b2b;
+  --color-code-foreground: #f8f8f2;
   
       }
     }
@@ -168,7 +168,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">array-api-compat 1.9.1 documentation</div></a>
+      <a href="index.html"><div class="brand">array-api-compat 1.13.0.dev0 documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -191,8 +191,7 @@
       
       <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
-  
-  <span class="sidebar-brand-text">array-api-compat 1.9.1 documentation</span>
+  <span class="sidebar-brand-text">array-api-compat 1.13.0.dev0 documentation</span>
   
 </a><form class="sidebar-search-container" method="get" action="search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
@@ -262,7 +261,7 @@ part of the specification but which are useful for using the array API:</p>
 consuming libraries.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.array_namespace">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">array_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">xs</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_version</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_compat</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_compat.array_namespace" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">array_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">xs</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">complex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">api_version</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_compat</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">ModuleType</span></span></span><a class="headerlink" href="#array_api_compat.array_namespace" title="Link to this definition">¶</a></dt>
 <dd><p>Get the array API compatible namespace for the arrays <code class="code docutils literal notranslate"><span class="pre">xs</span></code>.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -270,7 +269,7 @@ consuming libraries.</p>
 <li><p><strong>xs</strong> (<em>arrays</em>) – one or more arrays. xs can also be Python scalars (bool, int, float,
 complex, or None), which are ignored.</p></li>
 <li><p><strong>api_version</strong> (<em>str</em>) – The newest version of the spec that you need support for (currently
-the compat library wrapped APIs support v2023.12).</p></li>
+the compat library wrapped APIs support v2024.12).</p></li>
 <li><p><strong>use_compat</strong> (<em>bool or None</em>) – If None (the default), the native namespace will be returned if it is
 already array API compatible, otherwise a compat wrapper is used. If
 True, the compat library wrapped library will be returned. If False,
@@ -307,7 +306,7 @@ array-api-compat if it explicitly defines <a class="reference external" href="ht
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_array_api_obj">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_array_api_obj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_compat.is_array_api_obj" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_array_api_obj</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">TypeGuard</span><span class="p"><span class="pre">[</span></span><span class="pre">_ArrayApiObj</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#array_api_compat.is_array_api_obj" title="Link to this definition">¶</a></dt>
 <dd><p>Return True if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is an array API compatible array object.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -329,7 +328,7 @@ function</a>
 instead, which would be wrapped.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.device">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Device</span></span></span><a class="headerlink" href="#array_api_compat.device" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_ArrayApiObj</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Device</span></span></span><a class="headerlink" href="#array_api_compat.device" title="Link to this definition">¶</a></dt>
 <dd><p>Hardware device the array data resides on.</p>
 <p>This is equivalent to <code class="code docutils literal notranslate"><span class="pre">x.device</span></code> according to the <a class="reference external" href="https://data-apis.org/array-api/latest/API_specification/generated/array_api.array.device.html">standard</a>.
 This helper is included because some array libraries either do not have
@@ -357,7 +356,7 @@ special <code class="code docutils literal notranslate"><span class="pre">DASK_D
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.to_device">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">to_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Array</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Device</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Array</span></span></span><a class="headerlink" href="#array_api_compat.to_device" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">to_device</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em>, <em class="sig-param"><span class="positional-only-separator o"><abbr title="Positional-only parameter separator (PEP 570)"><span class="pre">/</span></abbr></span></em>, <em class="sig-param"><span class="keyword-only-separator o"><abbr title="Keyword-only parameters separator (PEP 3102)"><span class="pre">*</span></abbr></span></em>, <em class="sig-param"><span class="n"><span class="pre">stream</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">Any</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">object</span></span></span><a class="headerlink" href="#array_api_compat.to_device" title="Link to this definition">¶</a></dt>
 <dd><p>Copy the array from the device on which it currently resides to the specified <code class="docutils literal notranslate"><span class="pre">device</span></code>.</p>
 <p>This is equivalent to <code class="code docutils literal notranslate"><span class="pre">x.to_device(device,</span> <span class="pre">stream=stream)</span></code> according to
 the <a class="reference external" href="https://data-apis.org/array-api/latest/API_specification/generated/array_api.array.to_device.html">standard</a>.
@@ -369,7 +368,7 @@ This helper is included because some array libraries do not have the
 <li><p><strong>x</strong> (<em>array</em>) – array instance from an array API compatible library.</p></li>
 <li><p><strong>device</strong> (<em>device</em>) – a <code class="docutils literal notranslate"><span class="pre">device</span></code> object (see the <a class="reference external" href="https://data-apis.org/array-api/latest/design_topics/device_support.html">Device Support</a>
 section of the array API specification).</p></li>
-<li><p><strong>stream</strong> (<em>Optional[Union[int, Any]]</em>) – stream object to use during copy. In addition to the types supported
+<li><p><strong>stream</strong> (<em>int | Any | None</em>) – stream object to use during copy. In addition to the types supported
 in <code class="docutils literal notranslate"><span class="pre">array.__dlpack__</span></code>, implementations may choose to support any
 library-specific stream object with the caveat that any code using
 such an object would not be portable.</p></li>
@@ -383,9 +382,9 @@ specified <code class="docutils literal notranslate"><span class="pre">device</s
 <p class="rubric">Notes</p>
 <p>For NumPy, this function effectively does nothing since the only supported
 device is the CPU. For CuPy, this method supports CuPy CUDA
-<a class="reference external" href="https://docs.cupy.dev/en/stable/reference/generated/cupy.cuda.Device.html#cupy.cuda.Device" title="(in CuPy v13.4.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Device</span></code></a> and
-<a class="reference external" href="https://docs.cupy.dev/en/stable/reference/generated/cupy.cuda.Stream.html#cupy.cuda.Stream" title="(in CuPy v13.4.1)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stream</span></code></a> objects. For PyTorch,
-this is the same as <a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.Tensor.to.html#torch.Tensor.to" title="(in PyTorch v2.6)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">x.to(device)</span></code></a>
+<a class="reference external" href="https://docs.cupy.dev/en/stable/reference/generated/cupy.cuda.Device.html#cupy.cuda.Device" title="(in CuPy v13.6.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Device</span></code></a> and
+<a class="reference external" href="https://docs.cupy.dev/en/stable/reference/generated/cupy.cuda.Stream.html#cupy.cuda.Stream" title="(in CuPy v13.6.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Stream</span></code></a> objects. For PyTorch,
+this is the same as <a class="reference external" href="https://docs.pytorch.org/docs/stable/generated/torch.Tensor.to.html#torch.Tensor.to" title="(in PyTorch v2.8)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">x.to(device)</span></code></a>
 (the <code class="docutils literal notranslate"><span class="pre">stream</span></code> argument is not supported in PyTorch).</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -398,11 +397,15 @@ this is the same as <a class="reference external" href="https://pytorch.org/docs
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.size">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_compat.size" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HasShape</span><span class="p"><span class="pre">[</span></span><span class="pre">Collection</span><span class="p"><span class="pre">[</span></span><span class="pre">SupportsIndex</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#array_api_compat.size" title="Link to this definition">¶</a></dt>
+<dt class="sig sig-object py">
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">size</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">HasShape</span><span class="p"><span class="pre">[</span></span><span class="pre">Collection</span><span class="p"><span class="pre">[</span></span><span class="pre">SupportsIndex</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><span class="pre">None</span></span></span></dt>
 <dd><p>Return the total number of elements of x.</p>
-<p>This is equivalent to <code class="code docutils literal notranslate"><span class="pre">x.size</span></code> according to the <a class="reference external" href="https://data-apis.org/array-api/latest/API_specification/generated/array_api.array.size.html">standard</a>.
-This helper is included because PyTorch defines <code class="code docutils literal notranslate"><span class="pre">size</span></code> in an
-<a class="reference external" href="https://pytorch.org/docs/stable/generated/torch.Tensor.size.html#torch.Tensor.size" title="(in PyTorch v2.6)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">incompatible</span> <span class="pre">way</span></code></a>.</p>
+<p>This is equivalent to <code class="code docutils literal notranslate"><span class="pre">x.size</span></code> according to the <a class="reference external" href="https://data-apis.org/array-api/latest/API_specification/generated/array_api.array.size.html">standard</a>.</p>
+<p>This helper is included because PyTorch defines <code class="code docutils literal notranslate"><span class="pre">size</span></code> in an
+<a class="reference external" href="https://docs.pytorch.org/docs/stable/generated/torch.Tensor.size.html#torch.Tensor.size" title="(in PyTorch v2.8)"><code class="xref py py-meth docutils literal notranslate"><span class="pre">incompatible</span> <span class="pre">way</span></code></a>.
+It also fixes dask.array’s behaviour which returns nan for unknown sizes, whereas
+the standard requires None.</p>
 </dd></dl>
 
 </section>
@@ -413,7 +416,7 @@ specific library without importing that library if it hasn’t been imported
 yet.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_numpy_array">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_numpy_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_compat.is_numpy_array" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_numpy_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">TypeIs</span><span class="p"><span class="pre">[</span></span><span class="pre">npt.NDArray</span><span class="p"><span class="pre">[</span></span><span class="pre">Any</span><span class="p"><span class="pre">]</span></span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#array_api_compat.is_numpy_array" title="Link to this definition">¶</a></dt>
 <dd><p>Return True if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is a NumPy array.</p>
 <p>This function does not import NumPy if it has not already been imported
 and is therefore cheap to use.</p>
@@ -426,7 +429,7 @@ and is therefore cheap to use.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_cupy_array">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_cupy_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_compat.is_cupy_array" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_cupy_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#array_api_compat.is_cupy_array" title="Link to this definition">¶</a></dt>
 <dd><p>Return True if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is a CuPy array.</p>
 <p>This function does not import CuPy if it has not already been imported
 and is therefore cheap to use.</p>
@@ -439,7 +442,7 @@ and is therefore cheap to use.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_torch_array">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_torch_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_compat.is_torch_array" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_torch_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">TypeIs</span><span class="p"><span class="pre">[</span></span><span class="pre">torch.Tensor</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#array_api_compat.is_torch_array" title="Link to this definition">¶</a></dt>
 <dd><p>Return True if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is a PyTorch tensor.</p>
 <p>This function does not import PyTorch if it has not already been imported
 and is therefore cheap to use.</p>
@@ -451,7 +454,7 @@ and is therefore cheap to use.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_dask_array">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_dask_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_compat.is_dask_array" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_dask_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">TypeIs</span><span class="p"><span class="pre">[</span></span><span class="pre">da.Array</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#array_api_compat.is_dask_array" title="Link to this definition">¶</a></dt>
 <dd><p>Return True if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is a dask.array Array.</p>
 <p>This function does not import dask if it has not already been imported
 and is therefore cheap to use.</p>
@@ -463,7 +466,7 @@ and is therefore cheap to use.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_jax_array">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_jax_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_compat.is_jax_array" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_jax_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">TypeIs</span><span class="p"><span class="pre">[</span></span><span class="pre">jax.Array</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#array_api_compat.is_jax_array" title="Link to this definition">¶</a></dt>
 <dd><p>Return True if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is a JAX array.</p>
 <p>This function does not import JAX if it has not already been imported
 and is therefore cheap to use.</p>
@@ -475,7 +478,7 @@ and is therefore cheap to use.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_pydata_sparse_array">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_pydata_sparse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#array_api_compat.is_pydata_sparse_array" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_pydata_sparse_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">TypeIs</span><span class="p"><span class="pre">[</span></span><span class="pre">sparse.SparseArray</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#array_api_compat.is_pydata_sparse_array" title="Link to this definition">¶</a></dt>
 <dd><p>Return True if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is an array from the <code class="code docutils literal notranslate"><span class="pre">sparse</span></code> package.</p>
 <p>This function does not import <code class="code docutils literal notranslate"><span class="pre">sparse</span></code> if it has not already been imported
 and is therefore cheap to use.</p>
@@ -487,7 +490,7 @@ and is therefore cheap to use.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_ndonnx_array">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_ndonnx_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_compat.is_ndonnx_array" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_ndonnx_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">TypeIs</span><span class="p"><span class="pre">[</span></span><span class="pre">ndx.Array</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#array_api_compat.is_ndonnx_array" title="Link to this definition">¶</a></dt>
 <dd><p>Return True if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is a ndonnx Array.</p>
 <p>This function does not import ndonnx if it has not already been imported
 and is therefore cheap to use.</p>
@@ -498,8 +501,35 @@ and is therefore cheap to use.</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="array_api_compat.is_writeable_array">
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_writeable_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">TypeGuard</span><span class="p"><span class="pre">[</span></span><span class="pre">_ArrayApiObj</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#array_api_compat.is_writeable_array" title="Link to this definition">¶</a></dt>
+<dd><p>Return False if <code class="docutils literal notranslate"><span class="pre">x.__setitem__</span></code> is expected to raise; True otherwise.
+Return False if <code class="code docutils literal notranslate"><span class="pre">x</span></code> is not an array API compatible object.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>As there is no standard way to check if an array is writeable without actually
+writing to it, this function blindly returns True for all unknown array types.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="array_api_compat.is_lazy_array">
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_lazy_array</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">object</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">TypeGuard</span><span class="p"><span class="pre">[</span></span><span class="pre">_ArrayApiObj</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#array_api_compat.is_lazy_array" title="Link to this definition">¶</a></dt>
+<dd><p>Return True if x is potentially a future or it may be otherwise impossible or
+expensive to eagerly read its contents, regardless of their size, e.g. by
+calling <code class="docutils literal notranslate"><span class="pre">bool(x)</span></code> or <code class="docutils literal notranslate"><span class="pre">float(x)</span></code>.</p>
+<p>Return False otherwise; e.g. <code class="docutils literal notranslate"><span class="pre">bool(x)</span></code> etc. is guaranteed to succeed and to be
+cheap as long as the array has the right dtype and size.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This function errs on the side of caution for array types that may or may not be
+lazy, e.g. JAX arrays, by always returning True for them.</p>
+</div>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_numpy_namespace">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_numpy_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#array_api_compat.is_numpy_namespace" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_numpy_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ModuleType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#array_api_compat.is_numpy_namespace" title="Link to this definition">¶</a></dt>
 <dd><p>Returns True if <code class="code docutils literal notranslate"><span class="pre">xp</span></code> is a NumPy namespace.</p>
 <p>This includes both NumPy itself and the version wrapped by array-api-compat.</p>
 <div class="admonition seealso">
@@ -510,7 +540,7 @@ and is therefore cheap to use.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_cupy_namespace">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_cupy_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#array_api_compat.is_cupy_namespace" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_cupy_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ModuleType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#array_api_compat.is_cupy_namespace" title="Link to this definition">¶</a></dt>
 <dd><p>Returns True if <code class="code docutils literal notranslate"><span class="pre">xp</span></code> is a CuPy namespace.</p>
 <p>This includes both CuPy itself and the version wrapped by array-api-compat.</p>
 <div class="admonition seealso">
@@ -521,7 +551,7 @@ and is therefore cheap to use.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_torch_namespace">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_torch_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#array_api_compat.is_torch_namespace" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_torch_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ModuleType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#array_api_compat.is_torch_namespace" title="Link to this definition">¶</a></dt>
 <dd><p>Returns True if <code class="code docutils literal notranslate"><span class="pre">xp</span></code> is a PyTorch namespace.</p>
 <p>This includes both PyTorch itself and the version wrapped by array-api-compat.</p>
 <div class="admonition seealso">
@@ -532,7 +562,7 @@ and is therefore cheap to use.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_dask_namespace">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_dask_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_compat.is_dask_namespace" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_dask_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ModuleType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#array_api_compat.is_dask_namespace" title="Link to this definition">¶</a></dt>
 <dd><p>Returns True if <code class="code docutils literal notranslate"><span class="pre">xp</span></code> is a Dask namespace.</p>
 <p>This includes both <code class="docutils literal notranslate"><span class="pre">dask.array</span></code> itself and the version wrapped by array-api-compat.</p>
 <div class="admonition seealso">
@@ -543,7 +573,7 @@ and is therefore cheap to use.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_jax_namespace">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_jax_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_compat.is_jax_namespace" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_jax_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ModuleType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#array_api_compat.is_jax_namespace" title="Link to this definition">¶</a></dt>
 <dd><p>Returns True if <code class="code docutils literal notranslate"><span class="pre">xp</span></code> is a JAX namespace.</p>
 <p>This includes <code class="docutils literal notranslate"><span class="pre">jax.numpy</span></code> and <code class="docutils literal notranslate"><span class="pre">jax.experimental.array_api</span></code> which existed in
 older versions of JAX.</p>
@@ -555,7 +585,7 @@ older versions of JAX.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_pydata_sparse_namespace">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_pydata_sparse_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_compat.is_pydata_sparse_namespace" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_pydata_sparse_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ModuleType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#array_api_compat.is_pydata_sparse_namespace" title="Link to this definition">¶</a></dt>
 <dd><p>Returns True if <code class="code docutils literal notranslate"><span class="pre">xp</span></code> is a pydata/sparse namespace.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -565,7 +595,7 @@ older versions of JAX.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_ndonnx_namespace">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_ndonnx_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_compat.is_ndonnx_namespace" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_ndonnx_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ModuleType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#array_api_compat.is_ndonnx_namespace" title="Link to this definition">¶</a></dt>
 <dd><p>Returns True if <code class="code docutils literal notranslate"><span class="pre">xp</span></code> is an NDONNX namespace.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -575,7 +605,7 @@ older versions of JAX.</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="array_api_compat.is_array_api_strict_namespace">
-<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_array_api_strict_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#array_api_compat.is_array_api_strict_namespace" title="Link to this definition">¶</a></dt>
+<span class="sig-prename descclassname"><span class="pre">array_api_compat.</span></span><span class="sig-name descname"><span class="pre">is_array_api_strict_namespace</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">xp</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">ModuleType</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">bool</span></span></span><a class="headerlink" href="#array_api_compat.is_array_api_strict_namespace" title="Link to this definition">¶</a></dt>
 <dd><p>Returns True if <code class="code docutils literal notranslate"><span class="pre">xp</span></code> is an array-api-strict namespace.</p>
 <div class="admonition seealso">
 <p class="admonition-title">See also</p>
@@ -668,6 +698,8 @@ older versions of JAX.</p>
 <li><a class="reference internal" href="#array_api_compat.is_jax_array"><code class="docutils literal notranslate"><span class="pre">is_jax_array()</span></code></a></li>
 <li><a class="reference internal" href="#array_api_compat.is_pydata_sparse_array"><code class="docutils literal notranslate"><span class="pre">is_pydata_sparse_array()</span></code></a></li>
 <li><a class="reference internal" href="#array_api_compat.is_ndonnx_array"><code class="docutils literal notranslate"><span class="pre">is_ndonnx_array()</span></code></a></li>
+<li><a class="reference internal" href="#array_api_compat.is_writeable_array"><code class="docutils literal notranslate"><span class="pre">is_writeable_array()</span></code></a></li>
+<li><a class="reference internal" href="#array_api_compat.is_lazy_array"><code class="docutils literal notranslate"><span class="pre">is_lazy_array()</span></code></a></li>
 <li><a class="reference internal" href="#array_api_compat.is_numpy_namespace"><code class="docutils literal notranslate"><span class="pre">is_numpy_namespace()</span></code></a></li>
 <li><a class="reference internal" href="#array_api_compat.is_cupy_namespace"><code class="docutils literal notranslate"><span class="pre">is_cupy_namespace()</span></code></a></li>
 <li><a class="reference internal" href="#array_api_compat.is_torch_namespace"><code class="docutils literal notranslate"><span class="pre">is_torch_namespace()</span></code></a></li>
@@ -689,10 +721,10 @@ older versions of JAX.</p>
       
     </aside>
   </div>
-</div><script src="_static/documentation_options.js?v=60b3a732"></script>
+</div><script src="_static/documentation_options.js?v=1e6c7a3c"></script>
     <script src="_static/doctools.js?v=9bcbadda"></script>
     <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
-    <script src="_static/scripts/furo.js?v=5fa4622c"></script>
+    <script src="_static/scripts/furo.js?v=46bd48cc"></script>
     <script src="_static/clipboard.min.js?v=a7894cd8"></script>
     <script src="_static/copybutton.js?v=f281be69"></script>
     </body>
