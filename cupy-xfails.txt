@@ -24,6 +24,10 @@ array_api_tests/test_has_names.py::test_has_names[array_attribute-mT]
 
 array_api_tests/test_linalg.py::test_solve
 
+# 2025.12 support; {eig,eigvals} are new in CuPy 14
+array_api_tests/test_linalg.py::test_eig
+array_api_tests/test_linalg.py::test_eigvals
+
 # We cannot modify array methods
 array_api_tests/test_operators_and_elementwise_functions.py::test_divide[__truediv__(x, s)]
 array_api_tests/test_operators_and_elementwise_functions.py::test_floor_divide[__floordiv__(x, s)]
@@ -44,6 +48,11 @@ array_api_tests/test_operators_and_elementwise_functions.py::test_binary_with_sc
 array_api_tests/test_operators_and_elementwise_functions.py::test_binary_with_scalars_real[copysign]
 array_api_tests/test_operators_and_elementwise_functions.py::test_binary_with_scalars_real[divide]
 array_api_tests/test_operators_and_elementwise_functions.py::test_binary_with_scalars_real[maximum]
+array_api_tests/test_operators_and_elementwise_functions.py::test_binary_with_scalars_real[add]
+array_api_tests/test_operators_and_elementwise_functions.py::test_binary_with_scalars_real[minimum]
+array_api_tests/test_operators_and_elementwise_functions.py::test_binary_with_scalars_real[multiply]
+array_api_tests/test_operators_and_elementwise_functions.py::test_binary_with_scalars_real[subtract]
+
 
 # cupy (arg)min/max wrong with infinities
 # https://github.com/cupy/cupy/issues/7424
@@ -176,6 +185,18 @@ array_api_tests/test_special_cases.py::test_unary[tan(x_i is -0) -> -0]
 array_api_tests/test_special_cases.py::test_unary[tanh(x_i is -0) -> -0]
 array_api_tests/test_special_cases.py::test_unary[trunc(x_i is -0) -> -0]
 
+# complex spec cases
+array_api_tests/test_special_cases.py::test_unary[acosh(real(x_i) is +0 and imag(x_i) is NaN) -> NaN \xb1 \u03c0j/2]
+array_api_tests/test_special_cases.py::test_unary[log(real(x_i) is -0 and imag(x_i) is +0) -> -infinity + \u03c0j]
+array_api_tests/test_special_cases.py::test_unary[log((real(x_i) is +infinity or real(x_i) == -infinity) and imag(x_i) is NaN) -> +infinity + NaN j]
+array_api_tests/test_special_cases.py::test_unary[log(real(x_i) is NaN and imag(x_i) is +infinity) -> +infinity + NaN j]
+array_api_tests/test_special_cases.py::test_unary[log1p((real(x_i) is +infinity or real(x_i) == -infinity) and imag(x_i) is NaN) -> +infinity + NaN j]
+array_api_tests/test_special_cases.py::test_unary[log1p(real(x_i) is NaN and imag(x_i) is +infinity) -> +infinity + NaN j]
+array_api_tests/test_special_cases.py::test_unary[sqrt(real(x_i) is +infinity and isfinite(imag(x_i)) and imag(x_i) > 0) -> +0 + infinity j]
+array_api_tests/test_special_cases.py::test_unary[tanh(real(x_i) is +0 and imag(x_i) is +infinity) -> +0 + NaN j]
+array_api_tests/test_special_cases.py::test_unary[tanh(real(x_i) is +0 and imag(x_i) is NaN) -> +0 + NaN j]
+array_api_tests/test_special_cases.py::test_unary[tanh(real(x_i) is +infinity and isfinite(imag(x_i)) and imag(x_i) > 0) -> 1 + 0j]
+
 # CuPy gives the wrong shape for n-dim fft funcs. See
 # https://github.com/data-apis/array-api-compat/pull/78#issuecomment-1984527870
 array_api_tests/test_fft.py::test_fftn
@@ -192,12 +213,12 @@ array_api_tests/test_signatures.py::test_func_signature[from_dlpack]
 array_api_tests/test_signatures.py::test_array_method_signature[__dlpack__]
 
 # 2024.12 support
-array_api_tests/test_signatures.py::test_func_signature[bitwise_and]
-array_api_tests/test_signatures.py::test_func_signature[bitwise_left_shift]
-array_api_tests/test_signatures.py::test_func_signature[bitwise_or]
-array_api_tests/test_signatures.py::test_func_signature[bitwise_right_shift]
-array_api_tests/test_signatures.py::test_func_signature[bitwise_xor]
 array_api_tests/test_special_cases.py::test_binary[nextafter(x1_i is +0 and x2_i is -0) -> -0]
 
 # cupy 13.x follows numpy 1.x w/o weak promotion: result_type(int32, uint8, 1) != result_type(int32, uint8)
 array_api_tests/test_data_type_functions.py::TestResultType::test_with_scalars
+
+# CuPy 14 does not support copy= dlpack argument
+array_api_tests/test_dlpack.py::test_dunder_dlpack
+array_api_tests/test_dlpack.py::test_from_dlpack
+

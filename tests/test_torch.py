@@ -102,8 +102,20 @@ class TestResultType:
             torch.set_default_dtype(prev_default)
 
 
+def test_clip_vmap():
+    # https://github.com/data-apis/array-api-compat/issues/350
+    def apply_clip_compat(a):
+        return xp.clip(a, min=0, max=30)
+
+    a = xp.asarray([[5.1, 2.0, 64.1, -1.5]])
+
+    ref = apply_clip_compat(a)
+    v1 = torch.vmap(apply_clip_compat)
+    assert xp.all(v1(a) == ref)
+
+
 def test_meshgrid():
-    """Verify that array_api_compat.torch.meshgrid defaults to indexing='xy'."""
+    """Verify that array_api_compat.torch.meshgrid defaults to indexing='xy', and supports passing no arrays."""
 
     x, y = xp.asarray([1, 2]), xp.asarray([4])
 
@@ -117,3 +129,52 @@ def test_meshgrid():
 
     assert Y.shape == Y_xy.shape
     assert xp.all(Y == Y_xy)
+
+    # repeat with an explicit indexing
+    X, Y = xp.meshgrid(x, y, indexing='ij')
+
+    # output of torch.meshgrid(x, y, indexing='ij')
+    X_ij, Y_ij = xp.asarray([[1], [2]]), xp.asarray([[4], [4]])
+
+    assert X.shape == X_ij.shape
+    assert xp.all(X == X_ij)
+
+    assert Y.shape == Y_ij.shape
+    assert xp.all(Y == Y_ij)
+
+    assert not xp.meshgrid()
+
+
+def test_argsort_stable():
+    """Verify that argsort defaults to a stable sort."""
+    # Bare pytorch defaults to an unstable sort, and the array_api_compat wrapper
+    # enforces the stable=True default.
+    # cf https://github.com/data-apis/array-api-compat/pull/356 and
+    # https://github.com/data-apis/array-api-tests/pull/390#issuecomment-3452868329
+
+    t = xp.zeros(50)    # should be >16
+    assert xp.all(xp.argsort(t) == xp.arange(50))
+
+
+def test_round():
+    """Verify the out= argument of xp.round with complex inputs."""
+    x = torch.as_tensor([1.23456786]*3) + 3.456789j
+    o = torch.empty(3, dtype=torch.complex64)
+    r = xp.round(x, decimals=1, out=o)
+    assert xp.all(r == o)
+    assert r is o
+
+
+def test_dynamo_array_namespace():
+    """Check that torch.compiling array_namespace does not incur graph breaks."""
+    from array_api_compat import array_namespace
+
+    def foo(x):
+        xp = array_namespace(x)
+        return xp.multiply(x, x)
+
+    bar = torch.compile(fullgraph=True)(foo)
+
+    x = torch.arange(3)
+    y = bar(x)
+    assert xp.all(y == x**2)

@@ -129,6 +129,19 @@ array_api_tests/test_linalg.py::test_matrix_norm
 array_api_tests/test_linalg.py::test_qr
 array_api_tests/test_manipulation_functions.py::test_roll
 
+# 2025.12 support
+array_api_tests/test_has_names.py::test_has_names[manipulation-broadcast_shapes]
+array_api_tests/test_signatures.py::test_func_signature[broadcast_shapes]
+array_api_tests/test_data_type_functions.py::TestBroadcastShapes::test_broadcast_shapes
+array_api_tests/test_data_type_functions.py::TestBroadcastShapes::test_empty
+array_api_tests/test_data_type_functions.py::TestBroadcastShapes::test_error
+array_api_tests/test_searching_functions.py::test_searchsorted_with_scalars
+
+array_api_tests/test_linalg.py::test_eig
+array_api_tests/test_linalg.py::test_eigvals
+
+array_api_tests/test_manipulation_functions.py::TestExpandDims::test_expand_dims_tuples
+
 # Stubs have a comment: (**note**: libraries may return ``NaN`` to match Python behavior.)
 array_api_tests/test_special_cases.py::test_binary[floor_divide(x1_i is +infinity and isfinite(x2_i) and x2_i > 0) -> +infinity]
 array_api_tests/test_special_cases.py::test_binary[floor_divide(x1_i is +infinity and isfinite(x2_i) and x2_i < 0) -> -infinity]
@@ -148,3 +161,20 @@ array_api_tests/test_special_cases.py::test_iop[__ifloordiv__(x1_i is -infinity 
 array_api_tests/test_special_cases.py::test_iop[__ifloordiv__(x1_i is -infinity and isfinite(x2_i) and x2_i < 0) -> +infinity]
 array_api_tests/test_special_cases.py::test_iop[__ifloordiv__(isfinite(x1_i) and x1_i > 0 and x2_i is -infinity) -> -0]
 array_api_tests/test_special_cases.py::test_iop[__ifloordiv__(isfinite(x1_i) and x1_i < 0 and x2_i is +infinity) -> -0]
+
+# complex cases
+array_api_tests/test_special_cases.py::test_unary[expm1(real(x_i) is +infinity and imag(x_i) is +0) -> +infinity + 0j]
+array_api_tests/test_special_cases.py::test_unary[expm1(real(x_i) is -infinity and imag(x_i) is +infinity) -> -1 + 0j]
+array_api_tests/test_special_cases.py::test_unary[expm1(real(x_i) is +infinity and imag(x_i) is +infinity) -> infinity + NaN j]
+array_api_tests/test_special_cases.py::test_unary[expm1(real(x_i) is -infinity and imag(x_i) is NaN) -> -1 + 0j]
+array_api_tests/test_special_cases.py::test_unary[expm1(real(x_i) is +infinity and imag(x_i) is NaN) -> infinity + NaN j]
+array_api_tests/test_special_cases.py::test_unary[expm1(real(x_i) is NaN and imag(x_i) is +0) -> NaN + 0j]
+array_api_tests/test_special_cases.py::test_unary[sqrt(real(x_i) is +infinity and isfinite(imag(x_i)) and imag(x_i) > 0) -> +0 + infinity j]
+array_api_tests/test_special_cases.py::test_unary[tanh(real(x_i) is +infinity and isfinite(imag(x_i)) and imag(x_i) > 0) -> 1 + 0j]
+array_api_tests/test_special_cases.py::test_unary[expm1((real(x_i) is +0 or real(x_i) == -0) and imag(x_i) is +0) -> 0 + 0j]
+array_api_tests/test_special_cases.py::test_unary[acosh(real(x_i) is +0 and imag(x_i) is NaN) -> NaN \xb1 \u03c0j/2]
+
+# no dlpack support
+array_api_tests/test_dlpack.py::test_dlpack_device
+array_api_tests/test_dlpack.py::test_dunder_dlpack
+array_api_tests/test_dlpack.py::test_from_dlpack

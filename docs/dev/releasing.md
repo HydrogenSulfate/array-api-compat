@@ -24,7 +24,7 @@
 
   This does mean you can ignore CI failures, but ideally you should fix any
   failures or update the `*-xfails.txt` files before tagging, so that CI and
-  the CuPy tests fully pass. Otherwise it will be hard to tell what things are
+  the CuPy tests fully pass. Otherwise, it will be hard to tell what things are
   breaking in the future. It's also a good idea to remove any xpasses from
   those files (but be aware that some xfails are from flaky failures, so
   unless you know the underlying issue has been fixed, an xpass test is
@@ -44,14 +44,13 @@
 
 - [ ] **Update the version.**
 
-  You must edit
+  You must edit the version in:
 
   ```
   array_api_compat/__init__.py
+  pyproject.toml
+  meson.build
   ```
-
-  and update the version (the version is not computed from the tag because
-  that would break vendorability).
 
 - [ ] **Update the [changelog](../changelog.md).**
 
@@ -99,6 +98,11 @@
   changelog or xfails files, are updated in `main`. This will also make the
   docs update (the docs are published automatically from the sources on
   `main`).
+
+- [ ] **Bump the version in all locations mentioned above**
+
+  After an M.N.0 release, further development is towards version `M.(N+1).0`, thus the main branch's 
+  version is `M.(N+1).0.dev0`.
 
 - [ ] **Update conda-forge.**
 
