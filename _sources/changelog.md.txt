@@ -1,5 +1,102 @@
 # Changelog
 
+## 1.15.0 (2026-06-07)
+
+### Major changes
+
+- `array_namespace` can now be used under `torch.compile`.
+- The build system has changed from `setuptools` to `meson-python`.
+  Projects vendoring array-api-compat inside a meson project can now
+  rely on the in-tree meson project definition, which exposes the Python
+  sources via the `sources` variable. For example:
+  ```meson
+  array_api_compat = subproject('array_api_compat')
+  array_api_compat_sources = array_api_compat.get_variable('sources')
+  foreach prefix, files : array_api_compat_sources
+    py3.install_sources(files, subdir: external_dir / prefix)
+  endforeach
+  ```
+
+### Minor changes
+
+- `torch.round` now supports complex input.
+- `torch.arange` now works around missing dtype implementations instead of raising
+  an exception.
+
+Bug fixes:
+  - `np.matrix` instances are no longer considered to be standard array objects.
+  - `torch.meshgrid` now correctly handles the case of no input arrays.
+
+### Contributors
+
+The following users contributed to this release:
+
+Lucas Colley,
+Evgeni Burovski,
+Chris Ninham,
+Dimitri Papadopoulos Orfanos.
+
+## 1.14.0 (2026-02-26)
+
+### Major changes
+
+This release targets the 2025.12 Array API revision. This includes
+
+  - `__array_api_version__` for the wrapped APIs is now set to `2025.12`;
+  - wrappers for `linalg.eig` and `linalg.eigvals`;
+  - wrappers for `isin` and `searchsorted` to accept Python scalars;
+  - wrappers for `expand_dims` accepting tuple axes;
+  - `broadcast_arrays`, `meshgrid` and `__array_api_info__().devices()` have been
+    changed to return tuples, not lists;
+
+Additionally,
+
+  - `clip` wrappers have been fixed to be compatible with `torch.vmap`.
+
+
+### Minor changes
+
+  - `expand_dims` wrappers have been fixed to accept its `axis` argument as a keyword
+    or positional argument;
+  - `torch.clip` wrappers have been fixed to correctly handle `nan` scalars;
+  - `torch.repeat` wrapper has been fixed to not error out for short integers;
+
+
+The following users contributed to this release:
+
+Evgeni Burovski,
+Josh Soref.
+
+
+## 1.13.0 (2025-12-28)
+
+
+### Major changes
+
+- Support for Python 3.14 has been added.
+- Symbols exported in public namespaces have been reviewed and adjusted.
+- `torch.take` and `torch.take_along_axis` now support negative indices.
+- `torch.meshgrid` now correctly processes the `indexing` argument.
+- View/copy semantics are now observed for the `ceil`, `floor`, and `trunc` functions.
+
+### Minor changes
+
+- `array_namespace` has been sped up via caching.
+- The `stable` parameter of `torch.argsort` now defaults to `True`, per the standard.
+- Type annotations have seen progress.
+- `is_jax_array` has been adjusted for compatibility with `jax>=0.8.2`
+
+
+The following users contributed to this release:
+
+Evgeni Burovski,
+Guido Imperiale,
+Lucas Colley,
+Arthur Lacote,
+Martin Schuck,
+Matt Haberland.
+
+
 ## 1.12.0 (2025-05-13)
 
 
@@ -192,11 +289,11 @@ Thomas Li
     `xp.__array_namespace_info__()`.
   - Various fixes to the `clip()` wrappers.
 
-- `torch.conj` now wrapps `torch.conj_physical`, which makes a copy rather
+- `torch.conj` now wraps `torch.conj_physical`, which makes a copy rather
   than setting the conjugation bit, as arrays with the conjugation bit set do
   not support some APIs.
 
-- `torch.sign` is now wrapped to support complex numbers and propogate nans
+- `torch.sign` is now wrapped to support complex numbers and propagate nans
   properly.
 
 ### Minor Changes
@@ -269,7 +366,7 @@ Thomas Li
 
 - New flag `use_compat` to {func}`~.array_namespace` to force the use or
   non-use of the compat wrapper namespace. The default is to return a compat
-  namespace when it is appropiate.
+  namespace when it is appropriate.
 
 - Fix the `copy` flag to `asarray` for NumPy, CuPy, and Dask.
 
